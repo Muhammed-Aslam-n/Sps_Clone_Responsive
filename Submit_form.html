@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+
+  <!-- Google icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+    rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="Submit_style.css">
+  <!-- <script src="script.js"></script> -->
+  <title>Register Form | SPS</title>
+
+</head>
+
+<!-- Header -->
+<div class="container-fluid d-flex justify-content-center align-items-end" id="header">
+  <div class="row">
+    <div class="col-12">
+      <a class="mb-2" href="#">SPS<span>.</span></a>
+    </div>
+  </div>
+</div>
+<div class="container m-auto mt-5" id="registration">
+  <div class="row">
+    <div class="col-12">
+      <div class="box">
+        <div class="row">
+          <form action="" name="SpsForm" onsubmit="return validateForm()">
+            <div class="col-12">
+              <h2 class="heading">REGISTRATION</h2>
+            </div>
+            <div class="form-elements mt-5">
+              <div class="row mb-5">
+                <div class="col-lg-12" class="input-class">
+                  <input type='text' placeholder="Full Name" id="full-name">
+                  
+                </div>
+                <div>
+                  <label id="show-name" for="full-name">This field is Required</label>
+                </div>
+              </div>
+              <div class="row">
+                  <div class="col-lg-6 col-md-6 mb-5" class="input-class" style="padding-right:30px ;">
+                    <input type='text' placeholder="Place" id="place">
+                    
+                    <div>
+                      <label id="show-place">This field is Required</label>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-6 mt-1 mb-4" class="input-class">
+                    <select id="gender">
+                      <option value="none" disabled selected>Gender</option>
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Other</option>
+                    </select>
+                    <div>
+                      <label id="show-gender" class="m-0">This field is Required</label>
+                    </div>
+                  </div>
+              </div>
+              <div class="row mb-3 mt-2">
+                <div class="col-lg-12 " class="input-class">
+                  <input type='text' id="email" placeholder="Email" style="border: 0;">
+                  
+                </div>
+                <div>
+                  <label id="show-email">This field is Required</label>
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 col-md-6 mt-4 mb-4" class="input-class" style="padding-right:30px ;">
+                  <input type='text' placeholder="Contact number" id="contact">
+                  
+                  <div>
+                    <label id="show-contact">This field is Required</label>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-md-6 mt-4" class="input-class">
+                  <select id="e-status">
+                    <option value="none" disabled selected>Employment Status</option>
+                    <option value="employed">Employed</option>
+                    <option value="fresher">Fresher</option>
+                    <option value="student">Student</option>
+                  </select>
+                  
+                  <div>
+                    <label id="show-employment">This field is Required</label>
+                  </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+              <div class="col-lg-12" class="input-class">
+                <select id="qualification">
+                  <option value="none" disabled selected>Educational Quallification</option>
+                  <option value="btech">B.Tech</option>
+                  <option value="mtech">M.Tech</option>
+                  <option value="bca">BCA/MCA</option>
+                  <option value="bsc">Bsc/Msc</option>
+                  <option value="diploma">Diploma</option>
+                  <option value="other">Other</option>
+                </select>
+                
+              </div>
+              <div>
+                <label id="show-qualification">This field is Required</label>
+              </div>
+            </div>
+            <div class="row mt-5">
+              <div class="col-lg-12" class="input-class">
+                <input type='text' id="college" placeholder="Name of College / Organisation">
+                
+              </div>
+              <div>
+                <label id="show-college">This field is Required</label>
+              </div>
+            </div>
+            <div class="row mt-5">
+              <div class="col-lg-4" class="input-class">
+                <input type='number' placeholder="Year of Graduation" id="graduation">
+                
+                <div>
+                  <label id="show-graduation">This field is Required</label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-5">
+              <div class="col-lg-12" class="input-class">
+                <textarea placeholder="Tell us more about you" id="about" style="width: 100%;"></textarea>
+                
+              </div>
+              <div>
+                <label id="show-abt">This field is Required</label>
+              </div>
+            </div>
+
+            <div class="row mt-5">
+              <div class="col-lg-12" class="input-class">
+                <textarea placeholder="Why do you want to join SPS?" id="joinsps" style="width: 100%;"></textarea>
+                
+              </div>
+              <div>
+                <label id="show-jn">This field is Required</label>
+              </div>
+            </div>
+
+            <div class="row mt-5">
+              <div class="col-lg-12" class="input-class">
+                <textarea placeholder="What motivates you to work hard every day" name="motives" id="motives"
+                  style="width: 100%;"></textarea>
+                
+              </div>
+              <div>
+                <label id="show-motives" for="motives">This field is Required</label>
+              </div>
+            </div>
+
+            <div class="row mt-5">
+              <div class="col-lg-12" class="input-class">
+                <select id="learn-sps">
+                  <option value="none">From where did you learn about sps</option>
+                  <option value="channel">CrossRoads Youtube Channel</option>
+                  <option value="youtube">Youtube</option>
+                  <option value="friends">Friends</option>
+                  <option value="facebook">Facebook</option>
+                  <option value="whatsapp">Whatsapp</option>
+                </select>
+                
+              </div>
+              <div>
+                <label id="show-learn">This field is Required</label>
+              </div>
+            </div>
+
+            <div class="row mt-5">
+              <div class="col-lg-12" class="input-class">
+                <div style="border-bottom:0.5px solid #e6e6e6 ;">
+                  <input type="checkbox" id="c-agmnt"><span id="check"
+                    style="font-size: 13px;color: #adadad;font-weight:100;">&nbsp;&nbsp;&nbsp;I agree that I Have read
+                    and
+                    understood all the </span><a id="check-a" href="https://spsonline.in/index.html#faq">FAQS </a>
+                  
+                </div>
+                <div>
+                  <label id="show-ag">This field is Required</label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12 input-box">
+              <input type="submit" value="Register" class="btn sbtn w-100" />
+            </div>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container-fluid" style="background-color:#fff;">
+  <div class="d-flex justify-content-center p-5" id="footer">
+    <div class="row">
+      <div class="col-12" style="font-size: 14px;font-weight: 300;color: #666;">
+        Copyright ©Packapeer Academy Pvt Ltd 2021
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+<script>
+  const fullName = document.getElementById("full-name");
+  const place = document.getElementById("place");
+  const gender = document.getElementById("gender");
+  const email = document.getElementById("email");
+  const contactNumber = document.getElementById("contact");
+  const employmentStatus = document.getElementById("e-status");
+  const qualification = document.getElementById("qualification");
+  const college = document.getElementById("college");
+  const graduationYear = document.getElementById("graduation");
+  const aboutAs = document.getElementById("about");
+  const joinSps = document.getElementById("joinsps");
+  const motives = document.getElementById("motives");
+  const learnAboutSps = document.getElementById("learn-sps");
+  const checkBoxag = document.getElementById("c-agmnt");
+
+  function validateForm() {
+
+    if (fullName.value == "") {
+      document.getElementById("show-name").style.display = "block";
+      document.getElementById("show-name").style.color = "red";
+    } else if (fullName.value.length < 5) {
+      document.getElementById("show-name").style.display = "block";
+      document.getElementById("show-name").style.color = "red";
+      document.getElementById("show-name").innerHTML = "Please Enter at least 5 character";
+    }
+    else {
+      document.getElementById("show-name").style.display = "none";
+    }
+
+    if (place.value == "") {
+      document.getElementById("show-place").style.display = "block";
+      document.getElementById("show-place").style.color = "red";
+    } else {
+      document.getElementById("show-place").style.display = "none";
+    }
+
+
+    if (gender.value == "none") {
+      document.getElementById("show-gender").style.display = "block";
+      document.getElementById("show-gender").style.color = "red";
+      gender.style.borderBottom="red";
+    } else {
+      document.getElementById("show-gender").style.display = "none";
+    }
+
+
+    if (email.value == "") {
+      document.getElementById("show-email").style.display = "block";
+      document.getElementById("show-email").style.color = "red";
+    } else {
+      document.getElementById("show-email").style.display = "none";
+    }
+
+
+    if (contactNumber.value == "") {
+      document.getElementById("show-contact").style.display = "block";
+      document.getElementById("show-contact").style.color = "red";
+    } else {
+      document.getElementById("show-contact").style.display = "none";
+    }
+
+
+    if (employmentStatus.value == "none") {
+      document.getElementById("show-employment").style.display = "block";
+      document.getElementById("show-employment").style.color = "red";
+    } else {
+      document.getElementById("show-employment").style.display = "none";
+    }
+
+
+    if (qualification.value == "none") {
+      document.getElementById("show-qualification").style.display = "block";
+      document.getElementById("show-qualification").style.color = "red";
+    } else {
+      document.getElementById("show-qualification").style.display = "none";
+    }
+
+
+    if (college.value == "") {
+      document.getElementById("show-college").style.display = "block";
+      document.getElementById("show-college").style.color = "red";
+    } else {
+      document.getElementById("show-college").style.display = "none";
+    }
+
+
+    if (graduationYear.value == "") {
+      document.getElementById("show-graduation").style.display = "block";
+      document.getElementById("show-graduation").style.color = "red";
+    } else {
+      document.getElementById("show-graduation").style.display = "none";
+    }
+
+
+    if (aboutAs.value == "") {
+      document.getElementById("show-abt").style.display = "block";
+      document.getElementById("show-abt").style.color = "red";
+    } else {
+      document.getElementById("show-abt").style.display = "none";
+    }
+
+
+    if (joinSps.value == "") {
+      document.getElementById("show-jn").style.display = "block";
+      document.getElementById("show-jn").style.color = "red";
+    } else {
+      document.getElementById("show-jn").style.display = "none";
+    }
+
+
+    if (motives.value == "") {
+      document.getElementById("show-motives").style.display = "block";
+      document.getElementById("show-motives").style.color = "red";
+    } else {
+      document.getElementById("show-motives").style.display = "none";
+    }
+
+
+    if (learnAboutSps.value == "none") {
+      document.getElementById("show-learn").style.display = "block";
+      document.getElementById("show-learn").style.color = "red";
+    } else {
+      document.getElementById("show-learn").style.display = "none";
+    }
+
+    if (checkBoxag.checked !== true) {
+      document.getElementById("show-ag").style.display = "block";
+      document.getElementById("show-ag").style.color = "red"
+
+    } else {
+      console.log(" Checked")
+      document.getElementById("show-ag").style.display = "none";
+    }
+
+
+    return false;
+  }
+
+  function checkInput(inputElement, errorLabel) {
+    console.log(inputElement.value);
+    console.log(inputElement.length);
+    if (inputElement.value == "") {
+      errorLabel.style.display = "block";
+      errorLabel.style.color = "red";
+      errorLabel.innerHTML = "This field is Required";
+    } else if (inputElement.value.length < 5) {
+      errorLabel.innerHTML = "Please Enter at least 5 Character"
+      errorLabel.style.display = "block";
+      errorLabel.style.color = "red";
+      inputElement.style.color = "red";
+    }
+    else {
+      errorLabel.style.display = "none";
+      inputElement.style.color = "#6d6d6d";
+    }
+  }
+  function checkSelect(inputElement, errorLabel) {
+    if (inputElement.value == "" || inputElement.value == "none") {
+      errorLabel.style.display = "block";
+      errorLabel.style.color = "red";
+      errorLabel.innerHTML = "This field is Required";
+    } else {
+      errorLabel.style.display = "none";
+      inputElement.style.color = "#6d6d6d";
+    }
+  }
+
+  function checkEmail(inputElement, errorLabel) {
+    if (inputElement.value == "") {
+      errorLabel.style.display = "block";
+      errorLabel.style.color = "red";
+      errorLabel.innerHTML = "This field is Required"
+    } else if (inputElement.value.indexOf("@") < 0) {
+      errorLabel.style.display = "block";
+      errorLabel.style.color = "red";
+      inputElement.style.color = "red";
+      errorLabel.innerHTML = "Invalid Email"
+    } else if ((inputElement.value.charAt(inputElement.value.length - 4) != ".") && (inputElement.value.charAt(inputElement.value.length - 3) != ".")) {
+      errorLabel.innerHTML = "Mail Must have . in it";
+      inputElement.style.color = "red";
+    }
+    else {
+      errorLabel.style.display = "none";
+      inputElement.style.color = "#6d6d6d";
+    }
+  }
+  fullName.addEventListener("keyup", function () {
+    var error = document.getElementById("show-name");
+    checkInput(fullName, error);
+  })
+  place.addEventListener("keyup", function () {
+    var error = document.getElementById("show-place");
+    checkInput(place, error);
+  })
+  gender.addEventListener("change", function () {
+    var error = document.getElementById("show-gender");
+    checkSelect(gender, error);
+  })
+  email.addEventListener("keyup", function () {
+    var error = document.getElementById("show-email");
+    checkEmail(email, error);
+  })
+  contactNumber.addEventListener("keyup", function () {
+    var error = document.getElementById("show-contact");
+    if (contactNumber.value == "") {
+      error.style.display = "block";
+      error.innerHTML = "This field is required";
+      error.style.color = "red";
+      contactNumber.style.color = "red";
+    } else if (isNaN(contactNumber.value)) {
+      error.style.display = "block";
+      error.innerHTML = "Invalid format";
+      error.style.color = "red";
+      contactNumber.style.color = "red";
+    } else if (contactNumber.value.length < 10) {
+      error.style.display = "block";
+      error.innerHTML = "Inavlid format";
+      contactNumber.style.color = "red";
+      error.style.color = "red";
+    } else {
+      error.style.display = "none";
+    }
+  })
+  employmentStatus.addEventListener("change", function () {
+    var error = document.getElementById("show-employment");
+    checkSelect(employmentStatus, error);
+  })
+  qualification.addEventListener("change", function () {
+    var error = document.getElementById("show-qualification");
+    checkSelect(qualification, error);
+  })
+  college.addEventListener("keyup", function () {
+    var error = document.getElementById("show-college");
+    checkInput(college, error);
+  })
+  graduationYear.addEventListener("keyup", function () {
+    var error = document.getElementById("show-graduation");
+    checkInput(graduationYear, error);
+  })
+  aboutAs.addEventListener("keyup", function () {
+    var error = document.getElementById("show-abt");
+    checkInput(aboutAs, error);
+  })
+  joinSps.addEventListener("keyup", function () {
+    var error = document.getElementById("show-jn");
+    checkInput(joinSps, error);
+  })
+  motives.addEventListener("keyup", function () {
+    var error = document.getElementById("show-motives");
+    checkInput(motives, error);
+  })
+  learnAboutSps.addEventListener("change", function () {
+    var error = document.getElementById("show-learn");
+    checkSelect(learnAboutSps, error);
+  })
+  checkBoxag.addEventListener("click", function () {
+    var error = document.getElementById("show-ag");
+    console.log(error)
+    console.log(error.value)
+    if (checkBoxag.checked == true) {
+      error.style.display = "none";
+    }
+    else {
+      error.style.display = "block"
+    }
+  })
+</script>
+
+</body>
+
+</html>
